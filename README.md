@@ -1,1 +1,1 @@
-# ice-cream-dataops
+# bootcamp-cdm-start-template
