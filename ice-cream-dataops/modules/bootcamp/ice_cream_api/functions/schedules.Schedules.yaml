@@ -1,0 +1,95 @@
+- name: Frontfill every 10 minutes for the last hour of data (streamer)
+  functionExternalId: icapi_datapoints_extractor
+  cronExpression: "*/10 * * * *"
+  data:
+    hours: 1
+
+- name: Backfill Houston once a day for the last 15 days (gap filling)
+  functionExternalId: icapi_datapoints_extractor
+  cronExpression: "20 0 * * *"
+  data:
+    backfill: True
+    sites: 
+      - Houston
+    hours: 360
+
+- name: Backfill Kuala_Lumpur once a day for the last 15 days (gap filling)
+  functionExternalId: icapi_datapoints_extractor
+  cronExpression: "50 0 * * *"
+  data:
+    backfill: True
+    sites: 
+      - Kuala_Lumpur
+    hours: 360
+
+- name: Backfill Hannover once a day for the last 15 days (gap filling)
+  functionExternalId: icapi_datapoints_extractor
+  cronExpression: "20 1 * * *"
+  data:
+    backfill: True
+    sites:
+      - Hannover
+    hours: 360
+
+- name: Backfill Nuremberg once a day for the last 15 days (gap filling)
+  functionExternalId: icapi_datapoints_extractor
+  cronExpression: "50 1 * * *"
+  data:
+    backfill: True
+    sites: 
+      - Nuremberg
+    hours: 360
+
+- name: Backfill Marseille once a day for the last 15 days (gap filling)
+  functionExternalId: icapi_datapoints_extractor
+  cronExpression: "20 2 * * *"
+  data:
+    backfill: True
+    sites: 
+      - Marseille
+    hours: 360
+
+- name: Backfill Sao_Paulo once a day for the last 15 days (gap filling)
+  functionExternalId: icapi_datapoints_extractor
+  cronExpression: "50 2 * * *"
+  data:
+    backfill: True
+    sites: 
+      - Sao_Paulo
+    hours: 360
+
+- name: Backfill Chicago once a day for the last 15 days (gap filling)
+  functionExternalId: icapi_datapoints_extractor
+  cronExpression: "20 3 * * *"
+  data:
+    backfill: True
+    sites:
+      - Chicago
+    hours: 360
+
+- name: Backfill Rotterdam once a day for the last 15 days (gap filling)
+  functionExternalId: icapi_datapoints_extractor
+  cronExpression: "50 3 * * *"
+  data:
+    backfill: True
+    sites: 
+      - Rotterdam
+    hours: 360
+
+- name: Backfill London once a day for the last 15 days (gap filling)
+  functionExternalId: icapi_datapoints_extractor
+  cronExpression: "20 4 * * *"
+  data:
+    backfill: True
+    sites: 
+      - London
+    hours: 360
+
+- name: Backfill Oslo once a day for the last 15 days (gap filling)
+  functionExternalId: icapi_datapoints_extractor
+  cronExpression: "50 4 * * *"
+  data:
+    backfill: True
+    sites: 
+      - Oslo
+    hours: 360
